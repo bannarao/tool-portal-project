@@ -7,15 +7,20 @@
 
 ## Project Structure
 
-The repository is nearly empty for now. Update this section as files are added.
+Update this section as files are added.
 
 ```
 /
-├── CLAUDE.md   # This file
-└── .git/
+├── CLAUDE.md          # This file
+├── index.html         # Portal homepage
+├── tool-1.html        # Placeholder tool page
+├── css/
+│   └── styles.css     # Shared styles and light/dark theme colors
+└── js/
+    └── theme.js       # Shared light/dark theme toggle
 ```
 
-When pages are added, keep them organized like this:
+Keep new files organized like this:
 
 - `*.html` at the top level: the pages
 - `css/`: stylesheets
@@ -47,5 +52,7 @@ A portal where students try small Electrical Engineering web tools.
 ### Phases
 
 - **Phase 1: the portal plus its first tool.** Homepage, shared light/dark theme, responsive layout, and an Ohm's Law calculator that shows its working.
+  - [x] Portal homepage with a placeholder "Tool 1 — coming soon" card that opens `tool-1.html` and returns via "Back to all tools"
+  - [ ] Ohm's Law calculator (replaces the placeholder)
 - **Phase 2: more tools.** Add further Electrical Engineering tools one at a time (for example a resistor color code decoder or a voltage divider calculator).
 - **Phase 3: polish.** Unit prefixes (mA, kΩ) and easier browsing once there are many tools.
