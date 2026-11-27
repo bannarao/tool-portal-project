@@ -10,6 +10,10 @@
   --border: #c4c4c4;
   --link: #0b57d0;
   --focus: #0b57d0;
+  --error: #b3261e;
+  --control-border: #767676; /* borders of inputs and secondary buttons */
+  --button-bg: #0b57d0;
+  --button-text: #ffffff;
 }
 
 :root[data-theme="dark"] {
@@ -20,6 +24,10 @@
   --border: #484848;
   --link: #8ab4f8;
   --focus: #8ab4f8;
+  --error: #f2b8b5;
+  --control-border: #8a8a8a;
+  --button-bg: #8ab4f8;
+  --button-text: #121212;
 }
 
 * {
@@ -147,4 +155,113 @@ h1 {
   h1 {
     font-size: 2rem;
   }
+}
+
+/* Tool pages: form and results */
+[hidden] {
+  display: none !important; /* keep the hidden attribute working on styled elements */
+}
+
+.tool-form,
+.results {
+  max-width: 32rem;
+}
+
+.tool-form {
+  margin-top: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.125rem;
+  font-weight: 600;
+}
+
+.hint {
+  margin: 0 0 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+.field input {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--control-border);
+  border-radius: 6px;
+  font: inherit; /* 16px keeps phones from zooming in on focus */
+}
+
+.field input[aria-invalid="true"] {
+  border-color: var(--error);
+  border-width: 2px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button {
+  min-height: 44px;
+  padding: 0.5rem 1.25rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--button-bg);
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--control-border);
+}
+
+.message {
+  margin: 1rem 0 0;
+  min-height: 1.5em;
+}
+
+.message.error {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.results {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.results h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.results h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.0625rem;
+}
+
+.results ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.results li {
+  margin-bottom: 0.25rem;
+  overflow-wrap: anywhere;
 }

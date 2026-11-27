@@ -13,11 +13,12 @@ Update this section as files are added.
 /
 ├── CLAUDE.md          # This file
 ├── index.html         # Portal homepage
-├── tool-1.html        # Placeholder tool page
+├── ohms-law.html      # Ohm's Law calculator page
 ├── css/
 │   └── styles.css     # Shared styles and light/dark theme colors
 └── js/
-    └── theme.js       # Shared light/dark theme toggle
+    ├── theme.js       # Shared light/dark theme toggle
+    └── ohms-law.js    # Ohm's Law calculator logic
 ```
 
 Keep new files organized like this:
@@ -52,7 +53,7 @@ A portal where students try small Electrical Engineering web tools.
 ### Phases
 
 - **Phase 1: the portal plus its first tool.** Homepage, shared light/dark theme, responsive layout, and an Ohm's Law calculator that shows its working.
-  - [x] Portal homepage with a placeholder "Tool 1 — coming soon" card that opens `tool-1.html` and returns via "Back to all tools"
-  - [ ] Ohm's Law calculator (replaces the placeholder)
+  - [x] Portal homepage with a placeholder tool card that opens a tool page and returns via "Back to all tools"
+  - [x] Ohm's Law calculator (replaces the placeholder)
 - **Phase 2: more tools.** Add further Electrical Engineering tools one at a time (for example a resistor color code decoder or a voltage divider calculator).
 - **Phase 3: polish.** Unit prefixes (mA, kΩ) and easier browsing once there are many tools.

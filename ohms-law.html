@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ohm's Law calculator | EE Tools Portal</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="index.html">EE Tools Portal</a>
+      <button id="theme-toggle" class="theme-toggle" type="button">Switch to dark theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="index.html">← Back to all tools</a>
+
+    <h1>Ohm's Law calculator</h1>
+    <p class="intro">Voltage, current, resistance and power are linked by a few simple formulas. Fill in any two values below and this tool works out the other two, showing the formula it used.</p>
+
+    <form id="ohms-form" class="tool-form" novalidate>
+      <p class="hint">Use plain numbers in the units shown (no k or m prefixes). Values must be greater than zero.</p>
+
+      <div class="field">
+        <label for="field-V">Voltage, V (volts)</label>
+        <p class="hint" id="hint-V">The electrical push that drives the current.</p>
+        <input id="field-V" name="V" type="text" inputmode="decimal" autocomplete="off" aria-describedby="hint-V">
+      </div>
+
+      <div class="field">
+        <label for="field-I">Current, I (amps)</label>
+        <p class="hint" id="hint-I">How much electric charge flows past each second.</p>
+        <input id="field-I" name="I" type="text" inputmode="decimal" autocomplete="off" aria-describedby="hint-I">
+      </div>
+
+      <div class="field">
+        <label for="field-R">Resistance, R (ohms)</label>
+        <p class="hint" id="hint-R">How strongly a part holds back the current.</p>
+        <input id="field-R" name="R" type="text" inputmode="decimal" autocomplete="off" aria-describedby="hint-R">
+      </div>
+
+      <div class="field">
+        <label for="field-P">Power, P (watts)</label>
+        <p class="hint" id="hint-P">How fast electrical energy is being used.</p>
+        <input id="field-P" name="P" type="text" inputmode="decimal" autocomplete="off" aria-describedby="hint-P">
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="button">Calculate</button>
+        <button type="button" id="clear" class="button button-secondary">Clear</button>
+      </div>
+    </form>
+
+    <p id="message" class="message" aria-live="polite"></p>
+
+    <section id="results" class="results" aria-labelledby="results-heading" hidden>
+      <h2 id="results-heading">Results</h2>
+      <ul id="values"></ul>
+      <h3>How it was worked out</h3>
+      <ul id="working"></ul>
+    </section>
+  </main>
+
+  <script src="js/ohms-law.js"></script>
+</body>
+</html>
