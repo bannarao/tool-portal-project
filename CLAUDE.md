@@ -25,6 +25,7 @@ When pages are added, keep them organized like this:
 
 1. Every page must be responsive and work on desktop, tablet, and phone.
 2. Users can toggle between a light and a dark theme. The default is the light theme.
+3. Text must stay easy to read, with good contrast against its background, in both the light and the dark theme.
 
 ## Rules for Claude
 
